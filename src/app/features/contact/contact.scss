@@ -34,44 +34,95 @@
     }
   }
 
+  /* ✅ FORM WRAPPER */
   .contact-form-wrapper {
     background: var(--white);
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  }
+    animation: fadeInLeft 0.8s ease-out;
 
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
 
-    mat-form-field {
-      width: 100%;
-    }
+      mat-form-field {
+        width: 100%;
 
-    button {
-      background: var(--primary-orange);
-      color: var(--white);
-      padding: 12px;
-      font-size: 16px;
-      font-weight: 500;
-      margin-top: 10px;
+        /* ✅ KEEP YOUR CUSTOM BORDER LOGIC */
+        ::ng-deep {
+          .mat-mdc-text-field-wrapper {
+            background-color: transparent;
+          }
 
-      &:hover:not(:disabled) {
-        background: var(--primary-brown);
+          .mdc-text-field--outlined {
+            .mdc-notched-outline__leading,
+            .mdc-notched-outline__notch,
+            .mdc-notched-outline__trailing {
+              border-color: var(--border-color);
+            }
+
+            &:hover .mdc-notched-outline {
+              .mdc-notched-outline__leading,
+              .mdc-notched-outline__notch,
+              .mdc-notched-outline__trailing {
+                border-color: var(--primary-orange);
+              }
+            }
+
+            &.mdc-text-field--focused .mdc-notched-outline {
+              .mdc-notched-outline__leading,
+              .mdc-notched-outline__notch,
+              .mdc-notched-outline__trailing {
+                border-color: var(--primary-orange);
+              }
+            }
+          }
+
+          input,
+          textarea {
+            color: var(--text-primary);
+            caret-color: var(--primary-orange);
+          }
+
+          .mat-mdc-floating-label {
+            color: #666;
+          }
+
+          .mdc-text-field--focused .mat-mdc-floating-label {
+            color: var(--primary-orange);
+          }
+        }
       }
 
-      &:disabled {
-        opacity: 0.6;
+      button {
+        background: var(--primary-orange);
+        color: var(--white);
+        padding: 12px;
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 10px;
+        transition: all 0.3s ease;
+
+        &:hover:not(:disabled) {
+          background: var(--primary-brown);
+        }
+
+        &:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+        }
       }
     }
   }
 
+  /* ✅ CONTACT INFO */
   .contact-info {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    animation: fadeInRight 0.8s ease-out;
 
     .info-card {
       background: var(--white);
@@ -79,7 +130,7 @@
       border-radius: 8px;
       text-align: center;
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s;
+      transition: transform 0.3s ease;
 
       &:hover {
         transform: translateY(-5px);
@@ -102,5 +153,28 @@
         color: #666;
       }
     }
+  }
+}
+
+/* ✅ ANIMATIONS */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

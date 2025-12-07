@@ -66,7 +66,7 @@ import { MatIconModule } from '@angular/material/icon';
           <div class="team-grid">
             <mat-card class="team-member" *ngFor="let member of team">
               <div class="member-avatar">
-                <mat-icon>person</mat-icon>
+                <img [src]="member.image" [alt]="member.name" />
               </div>
               <h3>{{ member.name }}</h3>
               <p class="position">{{ member.position }}</p>
@@ -114,22 +114,21 @@ export class About {
     {
       name: 'მათე ჩემია',
       position: 'დირექტორი / მთავარი ინჟინერი',
-      bio: '15 წლიანი გამოცდილება საინჟინრო სისტემების დაპროექტებაში'
+      bio: '15 წლიანი გამოცდილება საინჟინრო სისტემების დაპროექტებაში',
+      image: 'mate.png'
     },
     {
       name: 'ზვიად ჩემია',
-      position: 'პროექტების მენეჯერი',
-      bio: 'პროექტების წარმატებული მართვა და კოორდინაცია'
+      position: 'დამფუძნებელი / პროექტების მენეჯერი',
+      bio: 'პროექტების წარმატებული მართვა და კოორდინაცია',
+      image: 'zviadi.png'
     },
     {
       name: 'ბესარიონ მელიქიშვილი',
-      position: 'მთავარი კონსტრუქტორი',
-      bio: 'სპეციალიზაცია HVAC სისტემების დაპროექტებაში'
+      position: 'დამფუძნებელი / პროექტების მენეჯერი',
+      bio: 'სპეციალიზაცია HVAC სისტემების დაპროექტებაში',
+      image: 'beso.png'
     },
-    {
-      name: 'ანა გელაშვილი',
-      position: 'ტექნიკური კონსულტანტი',
-      bio: 'ტექნიკური მხარდაჭერა და კლიენტებთან კომუნიკაცია'
-    }
+    
   ];
 }

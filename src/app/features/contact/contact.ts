@@ -82,13 +82,13 @@ import { Email } from '../../core/services/email';
             <div class="info-card">
               <mat-icon>phone</mat-icon>
               <h3>ტელეფონი</h3>
-              <p>+995 XXX XX XX XX</p>
+              <p>+995 577 788 098</p>
             </div>
 
             <div class="info-card">
               <mat-icon>email</mat-icon>
               <h3>ელ. ფოსტა</h3>
-              <p>info@projectworkshop.ge</p>
+              <p>projectworkshopltd@gmail.com</p>
             </div>
 
             <div class="info-card">

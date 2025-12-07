@@ -30,11 +30,11 @@ import { MatIconModule } from '@angular/material/icon';
             <ul class="contact-list">
               <li>
                 <mat-icon>phone</mat-icon>
-                <span>+995 XXX XX XX XX</span>
+                <span>+995 577 788 098</span>
               </li>
               <li>
                 <mat-icon>email</mat-icon>
-                <span>info@projectworkshop.ge</span>
+                <span>projectworkshopltd@gmail.com</span>
               </li>
               <li>
                 <mat-icon>location_on</mat-icon>
@@ -45,7 +45,7 @@ import { MatIconModule } from '@angular/material/icon';
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; 2024 საპროექტო სახელოსნო. ყველა უფლება დაცულია.</p>
+          <p>&copy; 2025 საპროექტო სახელოსნო. ყველა უფლება დაცულია.</p>
         </div>
       </div>
     </footer>
