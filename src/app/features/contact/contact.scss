@@ -55,12 +55,16 @@
           .mat-mdc-text-field-wrapper {
             background-color: transparent;
           }
+          mat-icon{
+            color: var(--primary-orange);
+          }
 
           .mdc-text-field--outlined {
             .mdc-notched-outline__leading,
             .mdc-notched-outline__notch,
             .mdc-notched-outline__trailing {
               border-color: var(--border-color);
+              will-change: opacity,transform,color;
             }
 
             &:hover .mdc-notched-outline {
@@ -68,6 +72,8 @@
               .mdc-notched-outline__notch,
               .mdc-notched-outline__trailing {
                 border-color: var(--primary-orange);
+              will-change: opacity,transform,color;
+
               }
             }
 
@@ -76,6 +82,7 @@
               .mdc-notched-outline__notch,
               .mdc-notched-outline__trailing {
                 border-color: var(--primary-orange);
+                will-change: opacity,transform,color;
               }
             }
           }
