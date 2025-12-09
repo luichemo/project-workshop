@@ -34,8 +34,7 @@
     }
   }
 
-  /* ✅ FORM WRAPPER */
-  .contact-form-wrapper {
+ .contact-form-wrapper {
     background: var(--white);
     padding: 40px;
     border-radius: 8px;
@@ -58,7 +57,7 @@
           mat-icon{
             color: var(--primary-orange);
           }
-
+~
           .mdc-text-field--outlined {
             .mdc-notched-outline__leading,
             .mdc-notched-outline__notch,
